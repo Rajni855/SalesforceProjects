@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={Opportunities.data}>
+                <template for:each={Opportunities.data} for:item="Opportunity">
+                    <p key={Opportunity.Id}>{Opportunity.Name}</p>
+                </template>
+            </template>
+            <template if:true={Opportunities.error}>
+               <p> errors={Opportunities.error}></p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

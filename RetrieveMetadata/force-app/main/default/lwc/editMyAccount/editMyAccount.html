@@ -1,0 +1,23 @@
+<template>
+    <lightning-record-edit-form record-id={recordId}
+    object-api-name="MyAccount__c" onsuccess={handleSuccess} onsubmit ={handleSubmit}  >        
+    <lightning-messages>
+    </lightning-messages>
+    <lightning-output-field field-name="Name">
+    </lightning-output-field>
+    <lightning-input-field field-name="Active__c">
+    </lightning-input-field>
+    <lightning-input-field field-name="Address__c">
+    </lightning-input-field>
+    <lightning-input-field field-name="Business__c">
+    </lightning-input-field>
+    <lightning-input-field field-name="HeadCount__c">
+    </lightning-input-field>
+    <lightning-input-field field-name="AccountContact__c">
+    </lightning-input-field>
+    
+    
+    <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+    </lightning-button>
+    </lightning-record-edit-form>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-layout  class="slds-align__absolute-center" multiple-rows=true>
+        <lightning-layout-item size="12">
+            <div class="greeting">{greeting}</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+            <div class="time">{time}</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="11">
+           <lightning-input type ="text" label="Whats in your mind today" variant="label-hidden" placeholder="Whats in your mind"></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="1">
+            <lightning-button-icon icon-name="utility:add" title="add todo" onclick={todoaddhandler} ></lightning-button-icon>
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+            <div>UpComing Tasks</div>
+            <template for:each={upcomingtask} for:item="todoitem">
+               <c-todoitem key={todoitem.todoitemid} todoid={todoitem.todoitemid} todoname={todoitem.todoitemname}></c-todoitem>
+               
+            </template>
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+            <div>Completed Tasks</div>
+            <template for:each={completedtask} for:item="todoitem">
+                <c-todoitem key={todoitem.todoitemid} todoid={todoitem.todoitemid} todoname={todoitem.todoitemname} done></c-todoitem>                 
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
