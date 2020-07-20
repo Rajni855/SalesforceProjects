@@ -1,0 +1,21 @@
+<template>
+        <div class="slds-m-vertical_medium">
+            <p>Info: <span class="slds-text-heading_small">Pills can include links and use separate handlers for clicks on the label text and the remove button (X). {infoText}</span></p>
+        </div>
+        <lightning-pill label="With link" href="/path/to/some/where"></lightning-pill>
+        <lightning-pill label="With only remove handler" onremove={handleRemove}></lightning-pill>
+        <lightning-pill label="With both remove and click handlers" onremove={handleRemove} onclick={handleClick}></lightning-pill>
+        <lightning-pill label="With isolated remove handler" onremove={handleRemoveOnly} onclick={handleClick}></lightning-pill>
+        <p>
+                A progress indicator displays the steps in a process. All steps preceding the step specified by currentStep are marked completed.
+            </p>
+            <lightning-progress-indicator id="ProgressInd" current-step=(steptrackString) type="path" has-error="true" variant="base">
+                <template for:each={steps} for:item="step">
+                    <lightning-progress-step label={step.label} value={step.value} key={step.label}></lightning-progress-step>
+                </template>
+            </lightning-progress-indicator>
+              <lightning-button label="Previous" class="slds-float_left slds-p-left_small" onclick={prevPage} icon-name="utility:back"  variant="brand">
+    </lightning-button>
+    <lightning-button label="next" class="slds-float_right slds-p-right_small" onclick={nextPage} variant="brand" icon-position="right"
+     icon-name="utility:forward"></lightning-button>
+    </template>

@@ -1,0 +1,18 @@
+<template>
+ <lightning-card title="All opportunity" icon-name="custom:custom63">
+    <div class="slds-m-around_medium">
+        <template class="slds-has-dividers_around-space" if:true={opportunityList} >
+            <template for:each={opportunityList} for:item="opportunity" class="slds-item" >
+                <p key={opportunity.fields.Id.value}>{opportunity.fields.Name.value}</p>
+                <p key={opportunity.fields.Id.value}>{opportunity.fields.StageName.value}</p>
+                  <lightning-button label="Mark as Closed Won" value = {opportunity.fields.Id.value}  key={opportunity.fields.Id.value} onclick={handleclick}></lightning-button>
+            </template>
+        </template>
+        <template if:true={error}>
+                
+           <p >{error}</p>
+                
+          </template>
+    </div>
+</lightning-card>
+</template>
