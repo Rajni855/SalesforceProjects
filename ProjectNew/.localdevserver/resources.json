@@ -1,0 +1,10 @@
+{
+    "ddaa64911b": {
+        "component://@webruntime/app@en-US": {
+            "dev": "f0f56dc89f"
+        },
+        "component://localdevserver/home@en-US": {
+            "dev": "69f3bacab1"
+        }
+    }
+}
